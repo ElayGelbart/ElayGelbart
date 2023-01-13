@@ -187,11 +187,23 @@
     }
 </style>
 
-<script>
+<script lang=ts>
     import GoogleAppsSvg from "./GoogleAppsSVG.svelte";
 	import GoogleCameraSvg from "./GoogleCameraSVG.svelte";
 	import GoogleMicrophoneSvg from "./GoogleMicrophoneSVG.svelte";
 	import GoogleSearchSvg from "./GoogleSearchSVG.svelte";
+    import { onMount } from "svelte";
+
+    let userPosition: string | {latitude:number,longitude:number} = ''
+    onMount(async () => {
+        navigator.geolocation.getCurrentPosition((position) => {
+            userPosition = {
+                latitude: position.coords.latitude,
+                longitude: position.coords.longitude
+            };
+        });
+    });
+    
 </script>
 
 <header>
@@ -212,6 +224,7 @@
         <div id="google-logo"><img src="/google.png" alt="google-logo"/></div>
 
         <form method="POST" role="search">
+            <input type="text" name="userPosition" value={JSON.stringify(userPosition)} hidden/>
             <div id="input-bar">
                 <svelte:component this={GoogleSearchSvg} />
                 <input type="text" name="searchQuery"/>
