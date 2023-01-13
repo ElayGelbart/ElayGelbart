@@ -1,4 +1,9 @@
 <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     header {    
         display: flex;
         align-items: center;
@@ -86,6 +91,36 @@
         align-items: center;
         gap: 1rem;
     }
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 100px;
+        box-sizing: border-box;
+        width:100vw;
+        background-color: #f2f2f2;
+        font-size: 15px;
+        color: #70757a;
+        overflow: hidden;
+    }
+    footer > div {
+        height: 50px;
+        padding: 0px 15px;
+    }
+    footer > div span{
+        padding: 15px;
+    }
+    #footer-language{
+        border-bottom: #dadce0 1px solid;
+        display: flex;
+        align-items: center;
+    }
+    #about{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
 </style>
 
 <script>
@@ -124,13 +159,27 @@
             <button type="submit">Google Search</button>
             <button type="button">I'm Feeling Lucky</button>
         </div>
+        <div id="language-offers">Google offered in: <a dir="rtl" href="https://www.google.com/setprefs?sig=0_WCA61GKU5MMIPYl0OZNfeKUBN70%3D&hl=iw&source=homepage&sa=X&ved=0ahUKEwjWzrKtmZD8AhXPDewKHcQnAEMQ2ZgBCBM">עברית</a> <a dir="rtl" href="https://www.google.com/setprefs?sig=0_WCA61GKU5MMIPYl0OZNfeKUBN70%3D&hl=ar&source=homepage&sa=X&ved=0ahUKEwjWzrKtmZD8AhXPDewKHcQnAEMQ2ZgBCBQ">العربية</a> </div>
     </form>
 
-    <div id="language-offers">Google offered in: <a dir="rtl" href="https://www.google.com/setprefs?sig=0_WCA61GKU5MMIPYl0OZNfeKUBN70%3D&hl=iw&source=homepage&sa=X&ved=0ahUKEwjWzrKtmZD8AhXPDewKHcQnAEMQ2ZgBCBM">עברית</a> <a dir="rtl" href="https://www.google.com/setprefs?sig=0_WCA61GKU5MMIPYl0OZNfeKUBN70%3D&hl=ar&source=homepage&sa=X&ved=0ahUKEwjWzrKtmZD8AhXPDewKHcQnAEMQ2ZgBCBQ">العربية</a> </div>
 </main>
 
 
 <footer>
-    <div id="footer-language"></div>
-    <div id="about"></div>
+    <div id="footer-language">
+        <span>Israel</span>
+    </div>
+    <div id="about">
+        <div>
+            <span>About</span>
+            <span>Advertising</span>
+            <span>Business</span>
+            <span>How Search works</span>
+        </div>
+        <div>
+            <span>Privacy</span>
+            <span>Terms</span>
+            <span>Settings</span>
+        </div>
+    </div>
 </footer>
