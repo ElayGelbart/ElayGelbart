@@ -1,4 +1,11 @@
 <style>
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
     header {    
         display: flex;
         align-items: center;
@@ -26,7 +33,7 @@
         display: flex;
         align-items: center;
         gap: 1rem;
-        
+
     }
 
     .header-selection-images{
@@ -147,7 +154,6 @@
     }
     #language-offers a{
         color: #1a0dab;
-        text-decoration: none;
     }
     footer {
         position: absolute;
@@ -165,7 +171,7 @@
         height: 50px;
         padding: 0px 15px;
     }
-    footer > div span{
+    footer > div a{
         padding: 15px;
     }
     #footer-language{
@@ -191,8 +197,8 @@
 <header>
     <div class="header-selection-container">
         <div class="header-selection-texts">
-            <span class="header-selection-text">Gmail</span>
-            <span class="header-selection-text">Images</span>
+            <a class="header-selection-text" href="https://mail.google.com/mail/">Gmail</a>
+            <a class="header-selection-text" href="https://www.google.co.il/imghp?hl=en&ogbl">Images</a>
         </div>
         <div class="header-selection-images">
             <svelte:component this={GoogleAppsSvg} />
@@ -205,10 +211,10 @@
     <div>
         <div id="google-logo"><img src="/google.png" alt="google-logo"/></div>
 
-        <form action="/search" method="GET" role="search">
+        <form method="POST" role="search">
             <div id="input-bar">
                 <svelte:component this={GoogleSearchSvg} />
-                <input type="text"/>
+                <input type="text" name="searchQuery"/>
                 <div id="input-bar-right-container">
                     <svelte:component this={GoogleMicrophoneSvg} />
                     <svelte:component this={GoogleCameraSvg} />
@@ -226,19 +232,19 @@
 
 <footer>
     <div id="footer-language">
-        <span>Israel</span>
+        <a href="https://policies.google.com/terms?hl=en-IL&fg=1">Israel</a>
     </div>
     <div id="about">
         <div>
-            <span>About</span>
-            <span>Advertising</span>
-            <span>Business</span>
-            <span>How Search works</span>
+            <a href="https://about.google/?utm_source=google-IL&utm_medium=referral&utm_campaign=hp-footer&fg=1">About</a>
+            <a href="https://www.google.com/intl/en_il/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+            <a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Business</a>
+            <a href="https://google.com/search/howsearchworks/?fg=1">How Search works</a>
         </div>
         <div>
-            <span>Privacy</span>
-            <span>Terms</span>
-            <span>Settings</span>
+            <a href="https://policies.google.com/privacy?hl=en-IL&fg=1">Privacy</a>
+            <a href="https://policies.google.com/terms?hl=en-IL&fg=1">Terms</a>
+            <a href="https://policies.google.com/terms?hl=en-IL&fg=1">Settings</a>
         </div>
     </div>
 </footer>
