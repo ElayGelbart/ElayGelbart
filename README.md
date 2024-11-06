@@ -1,13 +1,6 @@
 <h1 align="center">Hi 👋, I'm Elay Gelbart</h1>
 <h3 align="center">A passionate Full-Stack developer from Israel</h3>
-
-- 🔭 I’m currently working at [Lightspin Technologies](https://www.lightspin.io/)
-
-- 🌱 I’m currently learning **NextJS and Linux**
-
 - 👨‍💻 All of my projects are available at [elaygelbart.com](elaygelbart.com)
-
-- 💬 Ask me about **React, TS and Django**
 
 - 📫 How to reach me **elaygelbart@gmail.com**
 
